@@ -16,8 +16,8 @@ Combine YouTube memberships, Twitch subscribers, and Kick subscribers into unifi
 
 ## Quick Start
 
-1. Run MultistreamLabels Setup 1.0.0.exe in /dist and install the program
-2. Run MultistreamLabels 1.0.0.exe in the /dist/win-unpacked folder
+1. Run MultistreamLabels Setup 1.0.2.exe in /dist and install the program
+2. Run MultistreamLabels 1.0.2.exe in the /dist/win-unpacked folder
 3. Configure your OAuth credentials in the app
 4. Connect your platforms and start streaming!
 
@@ -43,12 +43,13 @@ When you first launch the app, you'll need to configure your OAuth credentials:
 3. Enable the **YouTube Data API v3**
 4. Go to Credentials → Create Credentials → OAuth client ID
 5. Configure the OAuth consent screen if prompted
-6. Set Application type to "Web application"
+6. Set Application type to "Web application", and set it to External
 7. Add authorized redirect URI: `http://localhost:3000/auth/youtube/callback`
 8. Copy the **Client ID** and **Client Secret**
 9. In the app, scroll to "API Configuration" and enter your credentials
 10. Click "Save YouTube Credentials"
-11. Click "Connect" next to YouTube
+11. Go to the "Audience" section in the Google Auth Platform and Publish the app.
+11. Click "Connect" next to YouTube and log in to your YouTube account
 
 **Note**: YouTube membership data requires your channel to be in the YouTube Partner Program with memberships enabled.
 
@@ -120,7 +121,7 @@ This includes:
 npm run build:win
 ```
 
-Output: `dist/MultistreamLabels 1.0.0.exe`
+Output: `dist/MultistreamLabels 1.0.1.exe`
 
 ## Troubleshooting
 
